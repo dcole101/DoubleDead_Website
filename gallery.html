@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!--                       CC-LINK v1.1
+      /// A WEBSITE TEMPLATE BY CC DEBTDEATH \\\
+          https://debtdeath.neocities.org/
+      Restyled for DOUBLE DEAD: red / grey / white, urban vampire edition
+-->
+  <meta charset="UTF-8">
+  <title>DOUBLE DEAD</title>
+  <meta name="description" content="The parallel story of two vampires living in the Canadian City of Deadmonton, when they're simultaneously accused of the same murder they didn't commit.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="dani cole">
+  <link rel="icon" type="image/svg+xml" href="/church/277.gif">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Special+Elite&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+   <link rel="stylesheet" href="homestyle.css">
+   <link rel="stylesheet" href="gallerystyle.css">
+ 
+</head>
+
+<body>
+
+  <!-- header that only shows up on mobile -->
+  <header class="mobile-only">
+    <a href="#top">DOUBLE DEAD</a>
+    <a href="#menu">MENU</a>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <div class="hero" id="top">
+    <div class="kicker">A vampire story from <b>Deadmonton</b>, Canada</div>
+    <h1 id="glow">DOUBLE DEAD</h1>
+    <p class="tagline">Two vampires. One murder. Neither of them did it, and they hate each other.</p>
+
+  </div>
+  <div class="tape"></div>
+
+  <!-- ================= MAIN ================= -->
+  <main>
+
+    <!-- ---------- CONTENT ---------- -->
+    <div class="content">
+<div class="gallery">
+  <div class="gallery-item">
+    <img src="Art/doubledead_art.png" alt="Description 1">
+  </div>
+  <div class="gallery-item">
+    <img src="Art/doubledead_lineup.png" alt="Description 2">
+  </div>
+    <div class="gallery-item">
+    <img src="Art/doubledead_redscenes.png" alt="Description 2">
+  </div>
+    <div class="gallery-item">
+    <img src="Art/sketches_jax.png" alt="Description 2">
+  </div>
+  <div class="gallery-item">
+    <img src="Art/sketches_wilf.png" alt="Description 2">
+  </div>
+  <div class="gallery-item">
+    <img src="Art/wilfandjaxsketch.png" alt="Description 2">
+  </div>
+  <div class="gallery-item">
+    <img src="Art/wilfjax no bg.png" alt="Description 2">
+  </div>
+   <div class="gallery-item">
+    <img src="Art/wilfjax.png" alt="Description 2">
+  </div>
+  <div class="gallery-item">
+    <img src="Art/wilfred doodles.png" alt="Description 2">
+  </div>
+  <div class="gallery-item">
+    <img src="Art/wilfrewhite.png" alt="Description 2">
+  </div>
+  <div class="gallery-item">
+    <img src="Art/jaxhead.png" alt="Description 2">
+  </div>
+   <div class="gallery-item">
+    <img src="Art/olivia 1.png" alt="Description 2">
+  </div>
+    <div class="gallery-item">
+    <img src="Screenshot 2026-11-03 134338.png" alt="Description 2">
+  </div>
+    <div class="gallery-item">
+    <img src="Art/doubledead_cast2.png" alt="Description 2">
+  </div>
+</div>
+
+<!-- The Lightbox Overlay -->
+<div id="lightbox" class="lightbox">
+  <span class="close-btn">&times;</span>
+  <img id="lightbox-img" src="" alt="Enlarged view">
+</div>
+
+  <!-- Add more items as needed -->
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const galleryImages = document.querySelectorAll('.gallery-item img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+
+  // Open Lightbox when an image is clicked
+  galleryImages.forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src; // Copy image source
+      lightboxImg.alt = img.alt; // Copy image alt tag
+      lightbox.classList.add('active'); // Reveal overlay
+    });
+  });
+
+  // Close Lightbox when clicking anywhere on the background or Close button
+  lightbox.addEventListener('click', (e) => {
+    // Only close if user clicks the overlay background or the 'X' button
+    if (e.target !== lightboxImg) {
+      lightbox.classList.remove('active');
+      lightboxImg.src = ''; // Clear source to save memory
+    }
+  });
+});
+
+</script>
+
+
+
+  
+</div>
+    <!-- ---------- SIDEBAR ---------- -->
+    <div class="sidebar">
+
+      <div class="widget">
+        
+      
+        <div id="intro">
+          <p id="bio">The parallel story of two vampires living in the Canadian City of Deadmonton, when they're simultaneously accused of the same murder they didn't commit.</p>
+        </div>
+      </div>
+
+      <nav id="menu">
+        <a href="index.html">Home</a>
+   
+         <a href="gallery.html">Gallery</a>
+       
+        
+      </nav>
+
+      
+
+    </div> <!-- end sidebar -->
+
+  </main>
+
+  <div class="tape"></div>
+  <footer>
+    <p>DOUBLE DEAD <span class="red">&bull;</span> DEADMONTON, CANADA</p>
+    <p> Best viewed after dark.</p>
+    <p class="template-credits"><a href="https://debtdeath.neocities.org/templates">TEMPLATE: (C) CC-LINK</a></p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+.gallery {
+  column-count: 4;          /* Default number of columns on large screens */
+  column-gap: 16px;         /* Space between columns */
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px;
+}
+
+.gallery-item {
+  break-inside: avoid;      /* Prevents an image item from splitting across columns */
+  margin-bottom: 16px;      /* Vertical spacing between stacked images */
+}
+
+.gallery-item img {
+  width: 100%;              /* Forces image to scale to the column width */
+  height: auto;             /* Automatically adjusts height to preserve original aspect ratio */
+  display: block;           /* Removes unwanted bottom baseline spacing */
+  border-radius: 8px;       /* Optional styling */
+  transition: transform 0.2s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.02);   /* Subtle hover zoom effect */
+}
+
+/* Responsive Media Queries for smaller viewports */
+@media (max-width: 1024px) {
+  .gallery {
+    column-count: 3;        /* Tablet: 3 columns */
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    column-count: 2;        /* Small tablet/large phone: 2 columns */
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    column-count: 1;        /* Mobile: 1 column */
+  }
+}
+
+/* Existing gallery styles from before... */
+.gallery-item img {
+  cursor: pointer; /* Changes cursor to a magnifying glass/pointer */
+}
+
+/* Lightbox Background Overlay */
+.lightbox {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000; /* Sits on top of everything else */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9); /* Dark semi-transparent backdrop */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Active Lightbox State */
+.lightbox.active {
+  display: flex; /* Centering behavior kicks in when active */
+}
+
+/* Lightbox Image Dimensions */
+.lightbox img {
+  max-width: 90%;
+  max-height: 85%;
+  object-fit: contain; /* Keeps original aspect ratio without stretching/cropping */
+  border-radius: 4px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Close Button (X) */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
